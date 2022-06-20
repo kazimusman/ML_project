@@ -10,6 +10,7 @@ This is my first ML project
 
 
 Creating conda environment(virtual environment venv)
+
 ```
 conda create -p venv python==3.7 -y 
 ```
@@ -43,14 +44,15 @@ To check all version maintained by git
 ```
 git log
 ```
-to create version/commit all changes by git
+To create version/commit all changes by git
 ```
 git commit -m "message"
 ```
 To send version/changes to github
 ```
 git push origin main
-'''
+```
+
 To check remote URL
 ```
 git remote -v
