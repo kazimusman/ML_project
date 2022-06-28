@@ -1,6 +1,12 @@
+# we are going to give name to entire pipeline and that name is given as housing
+# + every component of pipeline is going to generate some artefact/output and we store that 
+# artefact/output in artifact_dir folder
+
 training_pipeline_config:
   pipeline_name: housing
   artifact_dir: artifact
+
+# connect it with DataIngestionConfig command in entity folder
 
 data_ingestion_config:
   dataset_download_url: https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz
@@ -11,7 +17,7 @@ data_ingestion_config:
   ingested_test_dir: test 
 
 
-
+# where is our schema file . Connect with DataValidationConfig
 
 data_validation_config:
   schema_file_name: schema.yaml
@@ -36,3 +42,6 @@ model_evaluation_config:
 
 model_pusher_config:
   model_export_dir: saved_models
+
+# We are going to read above entrie information through code and 
+# we are going to assign this information to the entities
