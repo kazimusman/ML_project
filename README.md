@@ -92,6 +92,7 @@ docker stop <container_id>
 python setup.py install
 ```
 
+install ipykernel . To run jupyter notebook inside vs code 
 ```
-pip install ipynbkernel
+pip install ipykernel
 ```
