@@ -39,3 +39,5 @@ ModelPusherConfig = namedtuple("ModelPusherConfig",["export_dir_path"])
 
 # All above information we will provide through Yaml file . Just like csv file, excel file, jason file 
 
+TrainingPipelineConfig = namedtuple("TrainingPipelineConfig",["artifact_dir"])
+
