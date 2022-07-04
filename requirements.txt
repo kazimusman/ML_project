@@ -3,5 +3,6 @@ Flask
 gunicorn
 sklearn
 pandas
+# PyYAML is required in order to read yaml file 
 PyYAML
 -e .

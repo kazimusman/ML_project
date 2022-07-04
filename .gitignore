@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# C extensions
+*.so
+
+housing/artifact
+# Distribution / packaging
+.Python
+build/

@@ -6,8 +6,6 @@ training_pipeline_config:
   pipeline_name: housing
   artifact_dir: artifact
 
-# connect it with DataIngestionConfig command in entity folder
-
 data_ingestion_config:
   dataset_download_url: https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz
   raw_data_dir: raw_data
@@ -17,7 +15,7 @@ data_ingestion_config:
   ingested_test_dir: test 
 
 
-# where is our schema file . Connect with DataValidationConfig
+
 
 data_validation_config:
   schema_file_name: schema.yaml
@@ -29,7 +27,7 @@ data_transformation_config:
   transformed_test_dir: test
   preprocessing_dir: preprocessed
   preprocessed_object_file_name: preprocessed.pkl
-  
+
 model_trainer_config:
   trained_model_dir: trained_model
   model_file_name: model.pkl
@@ -38,7 +36,7 @@ model_trainer_config:
 
 model_evaluation_config:
   model_evaluation_file_name: model_evaluation.yaml
-  
+
 
 model_pusher_config:
   model_export_dir: saved_models
