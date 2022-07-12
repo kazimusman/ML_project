@@ -9,7 +9,6 @@ from six.moves import urllib
 import pandas as pd
 from sklearn.model_selection import StratifiedShuffleSplit
 
-
 class DataIngestion:
 
     def __init__(self,data_ingestion_config:DataIngestionConfig ):
@@ -122,7 +121,6 @@ class DataIngestion:
 
     def initiate_data_ingestion(self)-> DataIngestionArtifact:
         try:
-            pass
             tgz_file_path =  self.download_housing_data()
             self.extract_tgz_file(tgz_file_path=tgz_file_path)
             return self.split_data_as_train_test()
