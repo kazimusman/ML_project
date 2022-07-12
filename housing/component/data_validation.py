@@ -1,4 +1,4 @@
-mport sys,os
+import sys,os
 from housing.exception import HousingException
 from housing.logger import logging
 from housing.entity.artifact_entity import DataIngestionArtifact
