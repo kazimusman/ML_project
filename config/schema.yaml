@@ -1,5 +1,5 @@
 columns:
-  longnitude: float
+  longitude: float
   latitude: float
   housing_median_age: float
   total_rooms: float
@@ -11,7 +11,6 @@ columns:
   ocean_proximity: category
 
 target_column: median_house_value
-
 
 domain_value:
   ocean_proximity:
