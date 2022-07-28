@@ -7,7 +7,7 @@ DataIngestionConfig=namedtuple("DataIngestionConfig",
 
 
 # for data validation we only need schema file path . Wherever that schema file is located that path we need to specify
-
+DataValidationConfig = namedtuple("DataValidationConfig", ["schema_file_path"])
 DataValidationConfig = namedtuple("DataValidationConfig", ["schema_file_path","report_file_path","report_page_file_path"])
 
 # For feature Engineering 

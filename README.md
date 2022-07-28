@@ -96,3 +96,11 @@ install ipykernel . To run jupyter notebook inside vs code
 ```
 pip install ipykernel
 ```
+
+DATA DRIFT:
+When your dataset stats gets changes we call it as data drift.
+We try to check statistics of one dataset with other dataset and if the statistics of both dataset are same then
+we say it zero percent data drift. If both datasets have huge amount of statistical difference then we call it as 
+data drift.  
+
+## Write a function to get training file path from artifact dir
