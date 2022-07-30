@@ -6,5 +6,5 @@ pandas
 # PyYAML is required in order to read yaml file 
 PyYAML
 # For data Drift checking 
-evidently 
+#evidently 
 -e .
