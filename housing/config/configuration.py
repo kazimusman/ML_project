@@ -1,4 +1,5 @@
-from housing.entity.config_entity import DataIngestionConfig,TrainingPipelineConfig
+from housing.entity.config_entity import DataIngestionConfig, DataTransformationConfig,TrainingPipelineConfig, DataValidationConfig, \
+    DataTransformationConfig, ModelTrainerConfig, ModelEvaluationConfig, ModelPusherConfig
 from housing.util.util import read_yaml_file
 from housing.logger import logging
 import sys,os
@@ -71,26 +72,52 @@ class Configuartion:
 
     def get_data_validation_config(self) -> DataValidationConfig:  
         try:
+            artifact_dir = self.training_pipeline_config.artifact_dir
             
-            schema_file_path = None
-            data_validation_config = DataValidationConfig(
-                schema_file_path=schema_file_path
+            data_validation_artifact_dir=os.path.join(
+                artifact_dir,
+                DATA_VALIDATION_ARTIFACT_DIR_NAME,
+                self.time_stamp
             )
+            
+            data_validation_config = self.config_info[DATA_VALIDATION_CONFIG_KEY]
+
+            
+            schema_file_path = os.path.join(ROOT_DIR,
+            data_validation_config[DATA_VALIDATION_SCHEMA_DIR_KEY],
+            data_validation_config[DATA_VALIDATION_SCHEMA_FILE_NAME_KEY]
+            )
+
+            report_file_path = os.path.join(data_validation_artifact_dir,
+            data_validation_config[DATA_VALIDATION_REPORT_FILE_NAME_KEY]
+            )
+
+            report_page_file_path = os.path.join(data_validation_artifact_dir,
+            data_validation_config[DATA_VALIDATION_REPORT_PAGE_FILE_NAME_KEY]     
+            )
+
+            data_validation_config = DataValidationConfig(
+                schema_file_path=schema_file_path,
+                report_file_path=report_file_path,
+                report_page_file_path=report_page_file_path,
+            )
+
+
             return data_validation_config 
         except Exception as e:
             raise HousingException(e,sys) from e
 
-#def get_data_transformation_config(self) -> DataTransformationConfig:
-#    pass
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        pass
 
-#def get_model_trainer_config(self) -> ModelTrainerConfig:
-#    pass
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        pass
 
-#def get_model_evaluation_config(self) ->ModelEvaluationConfig:
-#    pass
+    def get_model_evaluation_config(self) ->ModelEvaluationConfig:
+        pass
 
-#def get_model_pusher_config(self) -> ModelPusherConfig:
-#    pass
+    def get_model_pusher_config(self) -> ModelPusherConfig:
+        pass
 
     def get_training_pipeline_config(self) ->TrainingPipelineConfig:
         try:
