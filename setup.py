@@ -13,7 +13,6 @@ HYPHEN_E_DOT = "-e ."
 
 def get_requirements_list()->List[str]:
 
-def get_requirements_list() -> List[str]:
     """
    
     Description: This function is going to return list of requirement 
