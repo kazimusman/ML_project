@@ -7,4 +7,5 @@ pandas
 PyYAML
 # For data Drift checking 
 evidently 
+dill
 -e .
