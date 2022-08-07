@@ -22,7 +22,7 @@ DataTransformationConfig = namedtuple("DataTransformationConfig", ["add_bedroom_
 # If we are training our model and if my model is not giving better accuracy than our base accuracy 
 # then we will not accept our model.
 
-ModelTrainerConfig = namedtuple("ModelTrainerConfig", ["trained_model_file_path","base_accuracy"])
+ModelTrainerConfig = namedtuple("ModelTrainerConfig", ["trained_model_file_path","base_accuracy","model_config_file_path"])
 
 # model_evaluatio_file_path contain some file which will have information about all the models that are in production.
 # time_stamp: whenever you are doing the comparison with the base model, at what time you have done that comparison, that
